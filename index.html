@@ -1,1 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://www.w3schools.cn/cdnjs/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8">
+<title>Miunaの生活笔记</title>
+<style>
+/*导航栏格式*/
+.headline
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+	box-shadow: 1px 1px 5px #888888;
+    position: fixed;/*相对于浏览器窗口固定*/
+	left: 0%;
+    top: 0;
+    width: 100%;
+}
+.headlink
+{
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	background-color: #ffffff;
+	float: left;
+}
+a.one:link {text-decoration:none;color:#ff0000;}
+a.one:visited {color:#696968;}
+a.one:hover {color:#ffcc00;}
+</style>
+</head>
+<body>
+	<!--侧边栏-->
+	<!--
+	  <h2>侧边栏实例 - 页面主体向右移动</h2>
+	  <p>点击以下菜单图标打开侧边栏，主体内容向右偏移。主体内容添加黑色透明背景</p>
+	  -->
+	 
+
+	<script>
+		function openNav() {
+		    document.getElementById("mySidenav").style.width = "250px";
+		    document.getElementById("main").style.marginLeft = "250px";
+		    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+		}
+		
+		function closeNav() {
+		    document.getElementById("mySidenav").style.width = "0";
+		    document.getElementById("main").style.marginLeft= "0";
+		    document.body.style.backgroundColor = "white";
+		}
+	</script>
+	<style>
+		body {
+		    font-family: "Lato", sans-serif;
+		    transition: background-color .5s;
+		}
+		
+		.sidenav {
+		    height: 100%;
+		    width: 0;
+		    position: fixed;
+		    z-index: 1;
+		    top: 50px;
+		    left: 0;
+		    background-color: #111;
+		    overflow-x: hidden;
+		    transition: 0.5s;
+		    padding-top: 60px;
+		}
+	
+		.sidenav a {
+		    padding: 8px 8px 8px 32px;
+		    text-decoration: none;
+		    font-size: 25px;
+		    color: #818181;
+		    display: block;
+		    transition: 0.3s;
+		}
+		
+		.sidenav a:hover,.dropdown-btn:hover, .offcanvas a:focus{
+		    color: #f1f1f1;
+		}
+		
+		
+		.sidenav .closebtn {
+		    position: absolute;
+		    top: 0;
+		    right: 25px;
+		    font-size: 36px;
+		    margin-left: 50px;
+		}
+		/* 为 sidenav 链接和下拉按钮设置样式 */
+		.sidenav a, .dropdown-btn {
+		  padding: 6px 8px 6px 16px;
+		  text-decoration: none;
+		  font-size: 20px;
+		  color: #818181;
+		  display: block;
+		  border: none;
+		  background: none;
+		  width: 100%;
+		  text-align: left;
+		  cursor: pointer;
+		  outline: none;
+		}
+
+		/* 为活动下拉按钮添加一个活动类 */
+		.active {
+		  background-color: #888888;
+		  color: white;
+		}
+		/* 下拉容器（默认隐藏）。 可选：添加较浅的背景颜色和一些左侧填充以更改下拉内容的设计 */
+		.dropdown-container {
+		  display: none;
+		  background-color: #262626;
+		  padding-left: 8px;
+		}
+		#main {
+		    transition: margin-left .5s;
+		    padding: 16px;
+		}
+		/* 可选：向下插入符号图标样式 */
+		.fa-caret-down {
+		  float: right;
+		  padding-right: 8px;
+		}
+		
+		/* 响应式的一些媒体查询 */
+		@media screen and (max-height: 450px) {
+		  .sidenav {padding-top: 15px;}
+		  .sidenav a {font-size: 18px;}
+		}
+	
+		</style>
+	
+	<!--导航栏主体-->
+	<ul class=headline>
+	<li class=headlink>
+	<a class="one" href="ziyong.html" target="_blank">Miunaの生活笔记</a>
+	</li>
+	</ul>
+	
+<!--看板娘区-->
 <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer;position:fixed;top:40pt;" onclick="openNav()">&#9776; 菜单</span>
+  <div id="main">
+</div>
+<!--侧边栏区块-->
+<div id="mySidenav" class="sidenav">
+	<a style="position: absolute;
+		    top: 0;
+		    left: 0px;
+		    font-size: 30px;
+			color: #818181;" onclick="closeNav()"><</a>
+ <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#clients">Clients</a>
+  <a href="#contact">fsdfds</a>
+  <button class="dropdown-btn">Dropdown 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">链接 1</a>
+    <a href="#">链接 2</a>
+    <a href="#">链接 3</a>
+  </div>
+  <a href="#contact">Search</a>
+</div>
+
+<div id="main">
+<h1>关于此网站</h1>
+<h2>纯属闲的没事干，看看就好</h2>
+<p>鲜衣怒马少年郎，谁人不识理塘王！</p>
+
+</div>
+ <script>
+	  /* 遍历所有下拉按钮以在隐藏和显示其下拉内容之间切换 - 这允许用户拥有多个下拉列表而不会发生任何冲突 */
+	  var dropdown = document.getElementsByClassName("dropdown-btn");
+	  var i;
+	  
+	  for (i = 0; i < dropdown.length; i++) {
+	    dropdown[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var dropdownContent = this.nextElementSibling;
+	    if (dropdownContent.style.display === "block") {
+	    dropdownContent.style.display = "none";
+	    } else {
+	    dropdownContent.style.display = "block";
+	    }
+	    });
+	  }
+	  </script>
+</body>
+
+
+</html>
